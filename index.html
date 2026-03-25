@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Great Town Freight — Professional freight transportation and logistics solutions. Nationwide coverage, DOT compliant, fully insured. FTL, LTL, dedicated freight and more." />
+  <meta name="keywords" content="freight transportation, trucking company, logistics, FTL, LTL, nationwide freight, DOT compliant carrier" />
+  <title>Great Town Freight | Professional Freight Transportation & Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Alert Bar -->
+  <div class="alert-bar">
+    <p><i class="fas fa-phone"></i>&nbsp; 24/7 Dispatch Available &mdash; Call or Request a Quote Online &nbsp;<a href="quote.html">Get Started &rsaquo;</a></p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Great Town <span>Freight</span></span>
+          <span class="nav-logo-tag">Transportation &amp; Logistics</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="fleet.html">Fleet</a></li>
+          <li><a href="coverage.html">Coverage</a></li>
+          <li><a href="safety.html">Safety</a></li>
+          <li><a href="shippers.html">Shippers / Brokers</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="quote.html">Request Quote</a></li>
+        </ul>
+        <div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="fleet.html">Fleet</a>
+      <a href="coverage.html">Coverage</a>
+      <a href="safety.html">Safety &amp; Compliance</a>
+      <a href="shippers.html">Shippers / Brokers</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="quote.html" class="mobile-cta">Request Freight Quote</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-shield-halved"></i>
+            DOT Compliant &bull; Fully Insured Carrier
+          </div>
+          <h1>Reliable Freight.<br><span>Nationwide Coverage.</span></h1>
+          <p class="hero-subtitle">Professional Transportation &amp; Logistics Solutions for Businesses Across the United States.</p>
+          <div class="hero-ctas">
+            <a href="quote.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Request Freight Quote</a>
+            <a href="shippers.html" class="btn btn-secondary btn-lg"><i class="fas fa-handshake"></i> Become a Shipping Partner</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">48</div>
+              <div class="hero-stat-label">States Served</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">24/7</div>
+              <div class="hero-stat-label">Dispatch</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">DOT Compliant</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-num">$1M+</div>
+              <div class="hero-stat-label">Cargo Insurance</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-truck-graphic">
+            <svg class="truck-icon-svg" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Trailer -->
+              <rect x="10" y="40" width="240" height="90" rx="6" fill="#1e4480" stroke="#c8921a" stroke-width="2"/>
+              <rect x="15" y="45" width="230" height="80" rx="4" fill="#162d52"/>
+              <!-- Cab -->
+              <rect x="250" y="55" width="110" height="75" rx="8" fill="#1e4480" stroke="#c8921a" stroke-width="2"/>
+              <rect x="295" y="58" width="62" height="38" rx="4" fill="#0d1e3a"/>
+              <rect x="298" y="61" width="56" height="32" rx="3" fill="#2a5ba8" opacity="0.8"/>
+              <!-- Wheels -->
+              <circle cx="60" cy="132" r="18" fill="#0d1e3a" stroke="#c8921a" stroke-width="3"/>
+              <circle cx="60" cy="132" r="8" fill="#162d52"/>
+              <circle cx="140" cy="132" r="18" fill="#0d1e3a" stroke="#c8921a" stroke-width="3"/>
+              <circle cx="140" cy="132" r="8" fill="#162d52"/>
+              <circle cx="285" cy="132" r="18" fill="#0d1e3a" stroke="#c8921a" stroke-width="3"/>
+              <circle cx="285" cy="132" r="8" fill="#162d52"/>
+              <circle cx="340" cy="132" r="18" fill="#0d1e3a" stroke="#c8921a" stroke-width="3"/>
+              <circle cx="340" cy="132" r="8" fill="#162d52"/>
+              <!-- Logo text on trailer -->
+              <text x="130" y="92" text-anchor="middle" font-family="Montserrat,Arial" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="1">GREAT TOWN</text>
+              <text x="130" y="110" text-anchor="middle" font-family="Montserrat,Arial" font-size="12" font-weight="700" fill="#c8921a" letter-spacing="3">FREIGHT</text>
+              <!-- Gold stripe -->
+              <rect x="10" y="115" width="240" height="5" fill="#c8921a"/>
+              <!-- Exhaust stack -->
+              <rect x="360" y="20" width="8" height="40" rx="4" fill="#2a5ba8"/>
+              <rect x="366" y="30" width="8" height="30" rx="4" fill="#2a5ba8"/>
+            </svg>
+          </div>
+          <div class="hero-info-cards">
+            <div class="hero-info-card">
+              <i class="fas fa-route"></i>
+              <div class="hero-info-card-text">
+                <strong>Nationwide Lanes</strong>
+                <span>All major corridors</span>
+              </div>
+            </div>
+            <div class="hero-info-card">
+              <i class="fas fa-clock"></i>
+              <div class="hero-info-card-text">
+                <strong>On-Time Delivery</strong>
+                <span>Reliable scheduling</span>
+              </div>
+            </div>
+            <div class="hero-info-card">
+              <i class="fas fa-shield-halved"></i>
+              <div class="hero-info-card-text">
+                <strong>Fully Insured</strong>
+                <span>Cargo &amp; liability</span>
+              </div>
+            </div>
+            <div class="hero-info-card">
+              <i class="fas fa-headset"></i>
+              <div class="hero-info-card-text">
+                <strong>24/7 Support</strong>
+                <span>Always available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Bar -->
+  <section class="cred-bar">
+    <div class="container">
+      <div class="cred-bar-inner">
+        <div class="cred-item">
+          <i class="fas fa-certificate"></i>
+          <div class="cred-item-text">
+            <strong>DOT Compliant</strong>
+            <span>Federally Registered</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <i class="fas fa-shield-halved"></i>
+          <div class="cred-item-text">
+            <strong>Fully Insured</strong>
+            <span>Cargo &amp; Liability</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <i class="fas fa-headset"></i>
+          <div class="cred-item-text">
+            <strong>24/7 Dispatch</strong>
+            <span>Round-the-Clock Support</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <i class="fas fa-user-tie"></i>
+          <div class="cred-item-text">
+            <strong>Experienced Drivers</strong>
+            <span>Professional &amp; Vetted</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <i class="fas fa-map-location-dot"></i>
+          <div class="cred-item-text">
+            <strong>Nationwide Coverage</strong>
+            <span>Contiguous 48 States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Freight Services We Provide</h2>
+        <p>From full truckload shipments to less-than-truckload consolidation, Great Town Freight delivers professional logistics solutions tailored to your business.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-truck"></i></div>
+          <h3>Full Truckload (FTL)</h3>
+          <p>Dedicated truck capacity for your full loads. Direct, efficient routing with no stops — ideal for large freight shipments requiring speed and security.</p>
+          <a href="services.html">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-boxes-stacked"></i></div>
+          <h3>Less Than Truckload (LTL)</h3>
+          <p>Cost-effective freight solutions for smaller shipments. Share trailer space and pay only for the capacity you use without sacrificing reliability.</p>
+          <a href="services.html">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Expedited Shipping</h3>
+          <p>Time-critical freight moves fast with our expedited service. Priority routing, dedicated capacity, and direct delivery for urgent shipments.</p>
+          <a href="services.html">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Dedicated Freight</h3>
+          <p>Committed capacity solutions for shippers with consistent freight volume. Reliable, scheduled transportation built around your operations.</p>
+          <a href="services.html">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Regional Transportation</h3>
+          <p>Efficient regional coverage across key markets. Short to mid-range hauls handled with the same professionalism as our long-distance lanes.</p>
+          <a href="services.html">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-diagram-project"></i></div>
+          <h3>Logistics Coordination</h3>
+          <p>End-to-end logistics management including scheduling, routing, carrier coordination, and real-time shipment visibility for your supply chain.</p>
+          <a href="services.html">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-40">
+        <a href="services.html" class="btn btn-navy"><i class="fas fa-list"></i> View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">48</div>
+          <div class="stat-label">States in Service Network</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">$1M+</div>
+          <div class="stat-label">Cargo Insurance Coverage</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Dispatch &amp; Operations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">FMCSA / DOT Compliance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coverage Section -->
+  <section class="section-pad coverage-section">
+    <div class="container">
+      <div class="coverage-inner">
+        <div class="coverage-content">
+          <span class="divider"></span>
+          <h2 class="text-white">Nationwide Service Coverage</h2>
+          <p>Great Town Freight provides comprehensive freight transportation across the contiguous 48 states. Our established lane network ensures reliable, timely delivery whether you're shipping regionally or coast to coast.</p>
+          <ul class="coverage-list">
+            <li><i class="fas fa-check-circle"></i> Northeast Corridor</li>
+            <li><i class="fas fa-check-circle"></i> Southeast Region</li>
+            <li><i class="fas fa-check-circle"></i> Midwest Lanes</li>
+            <li><i class="fas fa-check-circle"></i> Southwest Markets</li>
+            <li><i class="fas fa-check-circle"></i> Pacific Northwest</li>
+            <li><i class="fas fa-check-circle"></i> Mountain West</li>
+            <li><i class="fas fa-check-circle"></i> Gulf Coast</li>
+            <li><i class="fas fa-check-circle"></i> Central Plains</li>
+          </ul>
+          <a href="coverage.html" class="btn btn-primary"><i class="fas fa-map"></i> View Coverage Map</a>
+        </div>
+        <div class="map-container">
+          <!-- US Map SVG Outline -->
+          <svg class="us-map-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- US Outline simplified -->
+            <path d="M 120 80 L 680 80 L 700 120 L 720 180 L 700 260 L 680 320 L 640 360 L 580 380 L 480 390 L 380 400 L 280 390 L 180 360 L 120 300 L 80 220 L 90 150 Z" fill="rgba(30,68,128,0.3)" stroke="rgba(200,146,26,0.6)" stroke-width="2"/>
+            <!-- Route lines -->
+            <line x1="150" y1="200" x2="650" y2="200" stroke="rgba(200,146,26,0.5)" stroke-width="2" stroke-dasharray="8,6"/>
+            <line x1="400" y1="100" x2="400" y2="370" stroke="rgba(200,146,26,0.4)" stroke-width="2" stroke-dasharray="8,6"/>
+            <line x1="150" y1="200" x2="400" y2="360" stroke="rgba(200,146,26,0.3)" stroke-width="1.5" stroke-dasharray="6,6"/>
+            <line x1="650" y1="200" x2="400" y2="360" stroke="rgba(200,146,26,0.3)" stroke-width="1.5" stroke-dasharray="6,6"/>
+            <line x1="200" y1="150" x2="600" y2="280" stroke="rgba(200,146,26,0.25)" stroke-width="1.5" stroke-dasharray="6,6"/>
+            <!-- Cities / Nodes -->
+            <circle cx="180" cy="160" r="7" fill="#c8921a" filter="url(#glow)"/>
+            <circle cx="620" cy="175" r="7" fill="#c8921a" filter="url(#glow)"/>
+            <circle cx="400" cy="200" r="9" fill="#e5a820" filter="url(#glow)"/>
+            <circle cx="220" cy="280" r="6" fill="#c8921a" filter="url(#glow)"/>
+            <circle cx="560" cy="300" r="6" fill="#c8921a" filter="url(#glow)"/>
+            <circle cx="350" cy="330" r="6" fill="#c8921a" filter="url(#glow)"/>
+            <circle cx="480" cy="130" r="6" fill="#c8921a" filter="url(#glow)"/>
+            <circle cx="300" cy="210" r="5" fill="rgba(200,146,26,0.7)"/>
+            <circle cx="510" cy="240" r="5" fill="rgba(200,146,26,0.7)"/>
+            <!-- Labels -->
+            <text x="400" y="195" text-anchor="middle" font-family="Montserrat,Arial" font-size="11" font-weight="700" fill="#ffffff" opacity="0.9">HUB</text>
+            <text x="400" y="450" text-anchor="middle" font-family="Inter,Arial" font-size="13" fill="rgba(255,255,255,0.6)">Nationwide Service — Contiguous 48 States</text>
+            <text x="180" y="145" text-anchor="middle" font-family="Inter,Arial" font-size="9" fill="rgba(255,255,255,0.7)">NE</text>
+            <text x="620" y="160" text-anchor="middle" font-family="Inter,Arial" font-size="9" fill="rgba(255,255,255,0.7)">WEST</text>
+            <text x="220" y="298" text-anchor="middle" font-family="Inter,Arial" font-size="9" fill="rgba(255,255,255,0.7)">SE</text>
+            <text x="560" y="318" text-anchor="middle" font-family="Inter,Arial" font-size="9" fill="rgba(255,255,255,0.7)">SW</text>
+          </svg>
+          <p style="color:rgba(255,255,255,0.45); font-size:0.75rem; text-align:center; margin-top:8px;">Active freight lanes &mdash; updated regularly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Why Choose Great Town Freight</h2>
+        <p>We deliver more than freight — we deliver professionalism, reliability, and peace of mind on every shipment.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="fas fa-shield-halved"></i>
+          <h3>Full Regulatory Compliance</h3>
+          <p>Fully registered with the FMCSA, DOT compliant across all operations, and current on all federal and state transportation regulations.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Fully Insured Operations</h3>
+          <p>Comprehensive cargo and liability insurance coverage protects your freight from origin to delivery. Your shipment is always in safe hands.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Professional Dispatch</h3>
+          <p>Our dispatch team operates around the clock to coordinate pickups, track deliveries, and respond immediately to any freight needs.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-route"></i>
+          <h3>Established Lane Network</h3>
+          <p>Well-defined freight lanes across all major US corridors mean consistent capacity, predictable transit times, and reliable service.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-user-tie"></i>
+          <h3>Professional Driver Standards</h3>
+          <p>All drivers undergo thorough background checks, MVR reviews, and ongoing safety training. We only work with qualified, professional operators.</p>
+        </div>
+        <div class="why-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Client-First Approach</h3>
+          <p>Direct communication, transparent tracking, and responsive account management ensure your freight program runs smoothly every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner With Us -->
+  <section class="section-pad partner-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Partner With Great Town Freight</h2>
+        <p>Whether you're a shipper with consistent freight volume or a broker seeking reliable carrier capacity, we offer professional partnership solutions built for long-term success.</p>
+      </div>
+      <div class="partner-inner">
+        <div class="partner-card">
+          <div class="partner-card-icon"><i class="fas fa-building"></i></div>
+          <h3>Shippers &amp; Businesses</h3>
+          <p>Access reliable truckload and LTL capacity across our nationwide network. Professional communication, on-time delivery, and dedicated account support for businesses of all sizes.</p>
+          <ul class="check-list" style="margin-bottom:28px;">
+            <li><i class="fas fa-check"></i> Dedicated account management</li>
+            <li><i class="fas fa-check"></i> Flexible scheduling options</li>
+            <li><i class="fas fa-check"></i> Competitive market rates</li>
+            <li><i class="fas fa-check"></i> Full cargo insurance protection</li>
+          </ul>
+          <a href="quote.html" class="btn btn-navy"><i class="fas fa-file-invoice"></i> Request a Quote</a>
+        </div>
+        <div class="partner-card">
+          <div class="partner-card-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Freight Brokers &amp; 3PLs</h3>
+          <p>Reliable, professional carrier capacity for your brokerage operations. Quick setup, carrier packet available, and consistent communication that keeps your loads moving on schedule.</p>
+          <ul class="check-list" style="margin-bottom:28px;">
+            <li><i class="fas fa-check"></i> Carrier packet readily available</li>
+            <li><i class="fas fa-check"></i> Professional driver communication</li>
+            <li><i class="fas fa-check"></i> Quick qualification &amp; setup</li>
+            <li><i class="fas fa-check"></i> Consistent, reliable capacity</li>
+          </ul>
+          <a href="shippers.html" class="btn btn-primary"><i class="fas fa-handshake"></i> Become a Partner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Move Your Freight?</h2>
+      <p>Get a competitive freight quote from our team today. Professional logistics solutions for businesses nationwide.</p>
+      <div class="cta-banner-btns">
+        <a href="quote.html" class="btn btn-navy btn-lg"><i class="fas fa-file-invoice"></i> Request Freight Quote</a>
+        <a href="contact.html" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> Contact Dispatch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-name">Great Town <span>Freight</span></div>
+          <div class="footer-tagline">Freight Transportation &amp; Logistics</div>
+          <p class="footer-desc">Great Town Freight is a professional freight transportation and logistics company providing nationwide carrier services. Fully insured, DOT compliant, and committed to on-time delivery.</p>
+          <div class="footer-trust-badges">
+            <span class="trust-badge"><i class="fas fa-certificate"></i> DOT Compliant</span>
+            <span class="trust-badge"><i class="fas fa-shield-halved"></i> Fully Insured</span>
+            <span class="trust-badge"><i class="fas fa-check-circle"></i> FMCSA Registered</span>
+            <span class="trust-badge"><i class="fas fa-headset"></i> 24/7 Dispatch</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li>
+            <li><a href="coverage.html">Coverage Area</a></li>
+            <li><a href="safety.html">Safety &amp; Compliance</a></li>
+            <li><a href="shippers.html">Shippers / Brokers</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Full Truckload (FTL)</a></li>
+            <li><a href="services.html">Less Than Truckload (LTL)</a></li>
+            <li><a href="services.html">Dedicated Freight</a></li>
+            <li><a href="services.html">Expedited Shipping</a></li>
+            <li><a href="services.html">Regional Transportation</a></li>
+            <li><a href="services.html">Logistics Coordination</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span><a href="tel:+10000000000">(000) 000-0000</a><br><small>24/7 Dispatch Line</small></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span><a href="mailto:dispatch@greattownfreight.com">dispatch@greattownfreight.com</a><br><small>Dispatch &amp; Operations</small></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope-open"></i>
+            <span><a href="mailto:info@greattownfreight.com">info@greattownfreight.com</a><br><small>General Inquiries</small></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Dispatch: 24/7<br>Office: Mon–Fri 8AM–6PM</span>
+          </div>
+          <div style="margin-top:20px;">
+            <a href="quote.html" class="btn btn-primary" style="width:100%; justify-content:center;">Request Freight Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Great Town Freight. All Rights Reserved. &mdash; Professional Freight Transportation &amp; Logistics &mdash; Fully Insured Carrier &mdash; DOT Compliant Operations</p>
+        <div class="footer-bottom-links">
+          <a href="contact.html">Contact</a>
+          <a href="safety.html">Safety</a>
+          <a href="quote.html">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var m = document.getElementById('mobileMenu');
+      m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a freight quote from Great Town Freight — competitive rates on FTL, LTL, expedited, and dedicated freight services nationwide." />
+  <title>Request a Freight Quote | Great Town Freight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+      align-items: start;
+    }
+    .quote-sidebar {
+      position: sticky;
+      top: 90px;
+    }
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+    }
+    .sidebar-card h3 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+    .sidebar-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-contact-item:last-child { border-bottom: none; }
+    .sidebar-contact-item i { color: var(--gold); margin-top: 2px; font-size: 0.95rem; flex-shrink: 0; }
+    .sidebar-contact-item div label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 2px;
+    }
+    .sidebar-contact-item div a,
+    .sidebar-contact-item div span {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .sidebar-contact-item div a:hover { color: var(--blue); }
+    .trust-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .trust-list li:last-child { border-bottom: none; }
+    .trust-list li i { color: var(--gold); font-size: 0.85rem; }
+    @media (max-width: 900px) {
+      .quote-layout { grid-template-columns: 1fr; }
+      .quote-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="alert-bar">
+    <p><i class="fas fa-phone"></i>&nbsp; Need Freight Moved Fast? Call Dispatch 24/7 — <a href="tel:+10000000000">(000) 000-0000</a></p>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Great Town <span>Freight</span></span>
+          <span class="nav-logo-tag">Transportation &amp; Logistics</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li><li><a href="fleet.html">Fleet</a></li>
+          <li><a href="coverage.html">Coverage</a></li><li><a href="safety.html">Safety</a></li>
+          <li><a href="shippers.html">Shippers / Brokers</a></li><li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li><li class="nav-cta"><a href="quote.html" class="active">Request Quote</a></li>
+        </ul>
+        <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="fleet.html">Fleet</a><a href="coverage.html">Coverage</a><a href="safety.html">Safety &amp; Compliance</a>
+      <a href="shippers.html">Shippers / Brokers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="quote.html" class="mobile-cta">Request Freight Quote</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span>/</span>
+          <span style="color:rgba(255,255,255,0.7);">Request Quote</span>
+        </div>
+        <h1>Request a Freight Quote</h1>
+        <p>Complete the form below with your shipment details and our team will respond with a competitive rate quote — typically within 2–4 hours during business hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="quote-layout">
+
+        <!-- Form -->
+        <div>
+          <div class="form-wrap" style="max-width:none;">
+            <div class="form-title">
+              <span class="tag tag-navy" style="margin-bottom:14px; display:inline-block;">Free Quote — No Obligation</span>
+              <h2>Freight Quote Request</h2>
+              <p>Provide as much detail as possible about your shipment. The more information you give us, the more accurate our quote will be.</p>
+            </div>
+
+            <form action="#" method="POST" onsubmit="return handleQuoteSubmit(event)">
+
+              <!-- Section: Company & Contact Info -->
+              <div class="dot-divider"><span>Company &amp; Contact Information</span></div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Company Name *</label>
+                  <input type="text" name="company_name" placeholder="Shipping company or brokerage" required />
+                </div>
+                <div class="form-group">
+                  <label>Contact Name *</label>
+                  <input type="text" name="contact_name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                  <label>Phone Number *</label>
+                  <input type="tel" name="phone" placeholder="(000) 000-0000" required />
+                </div>
+                <div class="form-group">
+                  <label>Email Address *</label>
+                  <input type="email" name="email" placeholder="your@company.com" required />
+                </div>
+                <div class="form-group">
+                  <label>Your Role</label>
+                  <select name="role">
+                    <option value="">Select your role</option>
+                    <option>Shipper / Business Owner</option>
+                    <option>Freight Broker</option>
+                    <option>Logistics Manager</option>
+                    <option>3PL / Supply Chain Manager</option>
+                    <option>Purchasing Manager</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>How Did You Hear About Us?</label>
+                  <select name="referral">
+                    <option value="">Select source</option>
+                    <option>Google / Web Search</option>
+                    <option>DAT / Load Board</option>
+                    <option>Referral from Another Company</option>
+                    <option>Social Media</option>
+                    <option>Direct Mail / Marketing</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Section: Shipment Details -->
+              <div class="dot-divider"><span>Shipment Details</span></div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Pickup Location / Origin *</label>
+                  <input type="text" name="pickup_location" placeholder="City, State or full address" required />
+                </div>
+                <div class="form-group">
+                  <label>Delivery Location / Destination *</label>
+                  <input type="text" name="delivery_location" placeholder="City, State or full address" required />
+                </div>
+                <div class="form-group">
+                  <label>Freight Type / Commodity *</label>
+                  <select name="freight_type" required>
+                    <option value="">Select freight type</option>
+                    <option>General Freight / Dry Goods</option>
+                    <option>Palletized Freight</option>
+                    <option>Building Materials / Construction</option>
+                    <option>Manufacturing / Industrial</option>
+                    <option>Food Grade / Perishable</option>
+                    <option>Automotive Parts</option>
+                    <option>Electronics / Technology</option>
+                    <option>Retail / Consumer Goods</option>
+                    <option>Steel / Metal Products</option>
+                    <option>Lumber / Wood Products</option>
+                    <option>Machinery / Equipment</option>
+                    <option>Agricultural Products</option>
+                    <option>Chemicals (Non-Hazmat)</option>
+                    <option>Other — Specify in Notes</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Service Type *</label>
+                  <select name="service_type" required>
+                    <option value="">Select service</option>
+                    <option>Full Truckload (FTL)</option>
+                    <option>Less Than Truckload (LTL)</option>
+                    <option>Expedited Freight</option>
+                    <option>Dedicated Freight</option>
+                    <option>Regional Transportation</option>
+                    <option>Not Sure — Need Guidance</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Equipment Required</label>
+                  <select name="equipment">
+                    <option value="">Select equipment type</option>
+                    <option>Dry Van (53')</option>
+                    <option>Dry Van (48')</option>
+                    <option>Flatbed (48')</option>
+                    <option>Refrigerated / Reefer</option>
+                    <option>Box Truck</option>
+                    <option>Not Sure — Advise Me</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Freight Weight *</label>
+                  <input type="text" name="weight" placeholder="e.g., 24,000 lbs or 12 pallets" required />
+                </div>
+                <div class="form-group">
+                  <label>Freight Dimensions</label>
+                  <input type="text" name="dimensions" placeholder="L x W x H (if applicable)" />
+                </div>
+                <div class="form-group">
+                  <label>Number of Pieces / Pallets</label>
+                  <input type="text" name="pieces" placeholder="e.g., 20 pallets, 4 skids" />
+                </div>
+              </div>
+
+              <!-- Section: Scheduling -->
+              <div class="dot-divider"><span>Scheduling &amp; Timing</span></div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Desired Pickup Date *</label>
+                  <input type="date" name="pickup_date" required />
+                </div>
+                <div class="form-group">
+                  <label>Required Delivery Date</label>
+                  <input type="date" name="delivery_date" />
+                </div>
+                <div class="form-group">
+                  <label>Pickup Time Window</label>
+                  <select name="pickup_time">
+                    <option value="">Select preferred window</option>
+                    <option>Morning (6:00 AM – 12:00 PM)</option>
+                    <option>Afternoon (12:00 PM – 5:00 PM)</option>
+                    <option>Evening (5:00 PM – 9:00 PM)</option>
+                    <option>Overnight / After Hours</option>
+                    <option>Flexible — Any Time</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Frequency</label>
+                  <select name="frequency">
+                    <option value="">Select load frequency</option>
+                    <option>One-Time / Spot Load</option>
+                    <option>Weekly</option>
+                    <option>Bi-Weekly</option>
+                    <option>Monthly</option>
+                    <option>Multiple Times Per Week</option>
+                    <option>On Demand / As Needed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Hazardous Materials?</label>
+                  <select name="hazmat">
+                    <option>No — Standard Freight</option>
+                    <option>Yes — Hazmat (Specify in notes)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Special Requirements</label>
+                  <select name="special_reqs">
+                    <option>None</option>
+                    <option>Team Drivers Required</option>
+                    <option>Drop &amp; Hook</option>
+                    <option>Liftgate Required</option>
+                    <option>Inside Delivery</option>
+                    <option>Appointment Required</option>
+                    <option>Other — Specify in Notes</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Section: Additional Notes -->
+              <div class="dot-divider"><span>Additional Information</span></div>
+              <div class="form-grid full">
+                <div class="form-group">
+                  <label>Additional Notes / Special Instructions</label>
+                  <textarea name="notes" placeholder="Include any additional details about your freight, special handling requirements, loading/unloading instructions, preferred lanes, temperature requirements for reefer freight, or any other information that will help us provide an accurate quote..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary btn-lg" style="min-width:280px; justify-content:center; padding:18px 40px;">
+                  <i class="fas fa-file-invoice"></i> Request Freight Quote
+                </button>
+              </div>
+              <p class="form-note"><i class="fas fa-clock"></i> Quotes are typically provided within 2–4 hours during business hours. For urgent freight, call dispatch at <a href="tel:+10000000000" style="color:var(--navy); font-weight:600;">(000) 000-0000</a> for immediate assistance.</p>
+              <p class="form-note" style="margin-top:6px;"><i class="fas fa-lock"></i> Your information is secure and will only be used to provide your freight quote and related communications.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="quote-sidebar">
+          <div class="sidebar-card">
+            <h3>Contact Our Team</h3>
+            <div class="sidebar-contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <label>Dispatch — 24/7</label>
+                <a href="tel:+10000000000">(000) 000-0000</a>
+              </div>
+            </div>
+            <div class="sidebar-contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <label>Dispatch Email</label>
+                <a href="mailto:dispatch@greattownfreight.com">dispatch@<br>greattownfreight.com</a>
+              </div>
+            </div>
+            <div class="sidebar-contact-item">
+              <i class="fas fa-envelope-open"></i>
+              <div>
+                <label>General Inquiries</label>
+                <a href="mailto:info@greattownfreight.com">info@<br>greattownfreight.com</a>
+              </div>
+            </div>
+            <div class="sidebar-contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <label>Business Hours</label>
+                <span>Dispatch: 24/7<br>Office: Mon–Fri 8AM–6PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Why Quote With Us</h3>
+            <ul class="trust-list">
+              <li><i class="fas fa-check"></i> Competitive market rates</li>
+              <li><i class="fas fa-check"></i> Fast quote turnaround</li>
+              <li><i class="fas fa-check"></i> No obligation to book</li>
+              <li><i class="fas fa-check"></i> Transparent pricing</li>
+              <li><i class="fas fa-check"></i> DOT compliant carrier</li>
+              <li><i class="fas fa-check"></i> $1M+ cargo insurance</li>
+              <li><i class="fas fa-check"></i> 24/7 dispatch support</li>
+              <li><i class="fas fa-check"></i> Nationwide lane coverage</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card" style="background:linear-gradient(135deg,var(--navy),var(--navy-mid)); border-color:transparent;">
+            <h3 style="color:var(--gold);">Freight Brokers</h3>
+            <p style="font-size:0.84rem; color:rgba(255,255,255,0.7); margin-bottom:18px;">Request our carrier packet for immediate setup. We work with all major broker platforms and TMS systems.</p>
+            <a href="mailto:dispatch@greattownfreight.com?subject=Carrier Packet Request" class="btn btn-primary" style="width:100%; justify-content:center; font-size:0.8rem;"><i class="fas fa-file-arrow-down"></i> Request Carrier Packet</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>We Service</h3>
+            <ul class="trust-list">
+              <li><i class="fas fa-map-marker-alt"></i> All 48 contiguous states</li>
+              <li><i class="fas fa-truck"></i> FTL &amp; LTL freight</li>
+              <li><i class="fas fa-bolt"></i> Expedited &amp; time-critical</li>
+              <li><i class="fas fa-calendar-check"></i> Dedicated freight programs</li>
+              <li><i class="fas fa-snowflake"></i> Temperature-controlled</li>
+              <li><i class="fas fa-truck-flatbed"></i> Flatbed &amp; specialized</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Section -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>What You Can Expect</h2>
+        <p>From quote request to freight delivery, Great Town Freight provides the professional service your business deserves.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h4>Submit Your Quote Request</h4>
+          <p>Complete the form above with your shipment details. The more information you provide, the more accurate your quote will be.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h4>Receive Your Rate</h4>
+          <p>Our team reviews your freight requirements and contacts you with a competitive, transparent rate — typically within 2–4 business hours.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h4>Confirm &amp; Schedule</h4>
+          <p>Approve the rate and we schedule your pickup, assign equipment and driver, and confirm all dispatch details in writing.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h4>Pickup &amp; Delivery</h4>
+          <p>Your freight is picked up on schedule and delivered on time with complete documentation — BOL, POD, and invoice provided.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Need Freight Moved Urgently?</h2>
+      <p>Skip the form and call our dispatch line directly. We have capacity available and can often pick up same-day or next-morning on most lanes.</p>
+      <div class="cta-banner-btns">
+        <a href="tel:+10000000000" class="btn btn-navy btn-lg"><i class="fas fa-phone"></i> Call Dispatch Now — (000) 000-0000</a>
+        <a href="contact.html" class="btn btn-outline btn-lg"><i class="fas fa-envelope"></i> Send a Message</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-name">Great Town <span>Freight</span></div>
+          <div class="footer-tagline">Freight Transportation &amp; Logistics</div>
+          <p class="footer-desc">Professional freight transportation and logistics solutions nationwide. Fully insured, DOT compliant, and committed to on-time delivery.</p>
+          <div class="footer-trust-badges">
+            <span class="trust-badge"><i class="fas fa-certificate"></i> DOT Compliant</span>
+            <span class="trust-badge"><i class="fas fa-shield-halved"></i> Fully Insured</span>
+            <span class="trust-badge"><i class="fas fa-check-circle"></i> FMCSA Registered</span>
+            <span class="trust-badge"><i class="fas fa-headset"></i> 24/7 Dispatch</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li><li><a href="coverage.html">Coverage Area</a></li>
+            <li><a href="safety.html">Safety &amp; Compliance</a></li><li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Full Truckload (FTL)</a></li><li><a href="services.html">Less Than Truckload</a></li>
+            <li><a href="services.html">Dedicated Freight</a></li><li><a href="services.html">Expedited Shipping</a></li>
+            <li><a href="services.html">Regional Transportation</a></li><li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+10000000000">(000) 000-0000</a><br><small>24/7 Dispatch Line</small></span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:dispatch@greattownfreight.com">dispatch@greattownfreight.com</a></span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope-open"></i><span><a href="mailto:info@greattownfreight.com">info@greattownfreight.com</a></span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Dispatch: 24/7 &mdash; Office: Mon–Fri 8AM–6PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Great Town Freight. All Rights Reserved. &mdash; Professional Freight Transportation &amp; Logistics &mdash; Fully Insured Carrier &mdash; DOT Compliant Operations</p>
+        <div class="footer-bottom-links"><a href="contact.html">Contact</a><a href="safety.html">Safety</a><a href="quote.html">Get Quote</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu(){var m=document.getElementById('mobileMenu');m.style.display=m.style.display==='flex'?'none':'flex';}
+    function handleQuoteSubmit(e){
+      e.preventDefault();
+      var btn = e.target.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-check"></i> Quote Request Submitted!';
+      btn.style.background = '#16a34a';
+      btn.disabled = true;
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
+</body>
+</html>

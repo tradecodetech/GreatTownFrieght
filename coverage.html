@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Great Town Freight Coverage Area — Nationwide freight transportation across the contiguous 48 states. Regional lanes, primary corridors, and flexible logistics coverage." />
+  <title>Coverage Area | Great Town Freight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .map-full {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .map-full::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(200,146,26,0.06) 0%, transparent 70%);
+    }
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .region-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .region-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .region-card i { font-size: 1.8rem; color: var(--gold); margin-bottom: 12px; display: block; }
+    .region-card h4 { margin-bottom: 8px; font-size: 1rem; }
+    .region-card p  { font-size: 0.8rem; color: var(--text-light); margin: 0; }
+    .lane-table { width: 100%; border-collapse: collapse; }
+    .lane-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .lane-table th:first-child { border-radius: var(--radius) 0 0 0; }
+    .lane-table th:last-child  { border-radius: 0 var(--radius) 0 0; }
+    .lane-table td {
+      padding: 14px 20px;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+    }
+    .lane-table tr:last-child td { border-bottom: none; }
+    .lane-table tr:nth-child(even) td { background: var(--off-white); }
+    .lane-table td:first-child { font-weight: 600; color: var(--text-dark); }
+    .lane-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .lane-badge.active { background: rgba(30,68,128,0.12); color: var(--blue); }
+    @media (max-width: 768px) { .region-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .region-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="alert-bar">
+    <p><i class="fas fa-phone"></i>&nbsp; 24/7 Dispatch Available &mdash; Call or Request a Quote Online &nbsp;<a href="quote.html">Get Started &rsaquo;</a></p>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Great Town <span>Freight</span></span>
+          <span class="nav-logo-tag">Transportation &amp; Logistics</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li><li><a href="fleet.html">Fleet</a></li>
+          <li><a href="coverage.html" class="active">Coverage</a></li><li><a href="safety.html">Safety</a></li>
+          <li><a href="shippers.html">Shippers / Brokers</a></li><li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li><li class="nav-cta"><a href="quote.html">Request Quote</a></li>
+        </ul>
+        <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="fleet.html">Fleet</a><a href="coverage.html">Coverage</a><a href="safety.html">Safety &amp; Compliance</a>
+      <a href="shippers.html">Shippers / Brokers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="quote.html" class="mobile-cta">Request Freight Quote</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span>/</span>
+          <span style="color:rgba(255,255,255,0.7);">Coverage Area</span>
+        </div>
+        <h1>Nationwide Service Coverage</h1>
+        <p>Great Town Freight operates established freight lanes across the contiguous United States — serving all major markets, regional corridors, and distribution centers from coast to coast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Our Service Footprint</h2>
+        <p>Active freight lanes covering the contiguous 48 states — strategic coverage across all major domestic markets and transportation corridors.</p>
+      </div>
+      <div class="map-full">
+        <svg viewBox="0 0 960 580" xmlns="http://www.w3.org/2000/svg" style="width:100%; position:relative; z-index:1;">
+          <defs>
+            <filter id="glow2"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <filter id="glowsm"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <!-- US Background shape -->
+          <path d="M 130 95 L 820 95 L 840 130 L 860 190 L 850 290 L 830 370 L 790 430 L 710 460 L 590 478 L 470 485 L 350 478 L 220 450 L 140 380 L 100 280 L 105 180 Z"
+            fill="rgba(30,68,128,0.25)" stroke="rgba(200,146,26,0.5)" stroke-width="2.5"/>
+
+          <!-- Alaska (simplified) -->
+          <path d="M 110 490 L 200 490 L 210 520 L 180 540 L 110 530 Z" fill="rgba(30,68,128,0.2)" stroke="rgba(200,146,26,0.4)" stroke-width="1.5"/>
+          <text x="155" y="516" text-anchor="middle" font-family="Inter,Arial" font-size="9" fill="rgba(255,255,255,0.5)">AK</text>
+
+          <!-- Hawaii (simplified) -->
+          <path d="M 240 510 L 310 510 L 310 540 L 240 540 Z" fill="rgba(30,68,128,0.2)" stroke="rgba(200,146,26,0.4)" stroke-width="1.5"/>
+          <text x="275" y="530" text-anchor="middle" font-family="Inter,Arial" font-size="9" fill="rgba(255,255,255,0.5)">HI</text>
+
+          <!-- Primary freight lanes (dashed routes) -->
+          <!-- I-80 West-East corridor -->
+          <line x1="175" y1="230" x2="760" y2="230" stroke="rgba(200,146,26,0.6)" stroke-width="2.5" stroke-dasharray="10,7"/>
+          <!-- I-40 Southern corridor -->
+          <line x1="200" y1="330" x2="730" y2="310" stroke="rgba(200,146,26,0.5)" stroke-width="2" stroke-dasharray="10,7"/>
+          <!-- I-90 Northern corridor -->
+          <line x1="175" y1="165" x2="740" y2="155" stroke="rgba(200,146,26,0.4)" stroke-width="1.5" stroke-dasharray="8,8"/>
+          <!-- I-95 East Coast -->
+          <line x1="760" y1="130" x2="740" y2="430" stroke="rgba(200,146,26,0.55)" stroke-width="2" stroke-dasharray="8,7"/>
+          <!-- I-5 West Coast -->
+          <line x1="170" y1="130" x2="150" y2="400" stroke="rgba(200,146,26,0.55)" stroke-width="2" stroke-dasharray="8,7"/>
+          <!-- Central N-S -->
+          <line x1="475" y1="120" x2="490" y2="455" stroke="rgba(200,146,26,0.4)" stroke-width="2" stroke-dasharray="8,8"/>
+          <!-- Diagonal lanes -->
+          <line x1="200" y1="380" x2="720" y2="175" stroke="rgba(200,146,26,0.25)" stroke-width="1.5" stroke-dasharray="6,10"/>
+          <line x1="175" y1="220" x2="600" y2="420" stroke="rgba(200,146,26,0.2)" stroke-width="1.5" stroke-dasharray="6,10"/>
+
+          <!-- Major Hub Cities -->
+          <!-- Los Angeles -->
+          <circle cx="168" cy="360" r="10" fill="#c8921a" filter="url(#glow2)"/>
+          <text x="168" y="385" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Los Angeles</text>
+
+          <!-- Seattle -->
+          <circle cx="170" cy="148" r="8" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="170" y="138" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Seattle</text>
+
+          <!-- Denver -->
+          <circle cx="380" cy="265" r="8" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="380" y="255" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Denver</text>
+
+          <!-- Dallas -->
+          <circle cx="490" cy="380" r="9" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="490" y="400" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Dallas</text>
+
+          <!-- Chicago -->
+          <circle cx="590" cy="210" r="10" fill="#e5a820" filter="url(#glow2)"/>
+          <text x="590" y="200" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.9)">Chicago</text>
+
+          <!-- Atlanta -->
+          <circle cx="660" cy="360" r="8" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="660" y="378" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Atlanta</text>
+
+          <!-- New York -->
+          <circle cx="770" cy="190" r="10" fill="#c8921a" filter="url(#glow2)"/>
+          <text x="800" y="190" text-anchor="left" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">New York</text>
+
+          <!-- Miami -->
+          <circle cx="730" cy="450" r="7" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="730" y="468" text-anchor="middle" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Miami</text>
+
+          <!-- Houston -->
+          <circle cx="540" cy="415" r="8" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="560" y="435" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.8)">Houston</text>
+
+          <!-- Phoenix -->
+          <circle cx="265" cy="358" r="7" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="240" y="375" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.7)">Phoenix</text>
+
+          <!-- Minneapolis -->
+          <circle cx="525" cy="162" r="7" fill="#c8921a" filter="url(#glowsm)"/>
+          <text x="500" y="153" font-family="Inter,Arial" font-size="10" fill="rgba(255,255,255,0.7)">Minneapolis</text>
+
+          <!-- Nashville -->
+          <circle cx="640" cy="295" r="7" fill="#c8921a" filter="url(#glowsm)"/>
+
+          <!-- Kansas City -->
+          <circle cx="530" cy="268" r="7" fill="#c8921a" filter="url(#glowsm)"/>
+
+          <!-- Legend -->
+          <rect x="100" y="490" width="300" height="75" rx="8" fill="rgba(13,30,58,0.85)" stroke="rgba(200,146,26,0.3)" stroke-width="1"/>
+          <circle cx="125" cy="515" r="7" fill="#c8921a"/>
+          <text x="140" y="519" font-family="Inter,Arial" font-size="11" fill="rgba(255,255,255,0.8)">Major Freight Hub</text>
+          <line x1="116" y1="540" x2="145" y2="540" stroke="rgba(200,146,26,0.8)" stroke-width="2" stroke-dasharray="6,4"/>
+          <text x="152" y="544" font-family="Inter,Arial" font-size="11" fill="rgba(255,255,255,0.8)">Primary Freight Lane</text>
+
+          <!-- Title -->
+          <text x="480" y="558" text-anchor="middle" font-family="Montserrat,Arial" font-size="13" font-weight="700" fill="rgba(255,255,255,0.5)" letter-spacing="2">GREAT TOWN FREIGHT — NATIONWIDE COVERAGE</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Coverage -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Regional Service Areas</h2>
+        <p>Dedicated coverage across all major US regions — consistent capacity and reliable service in every market we serve.</p>
+      </div>
+      <div class="region-grid">
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Northeast</h4>
+          <p>ME, NH, VT, MA, RI, CT, NY, NJ, PA, DE, MD, DC</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Southeast</h4>
+          <p>VA, WV, NC, SC, GA, FL, TN, KY, AL, MS</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Midwest</h4>
+          <p>OH, IN, IL, MI, WI, MN, IA, MO, ND, SD, NE, KS</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>South / Gulf Coast</h4>
+          <p>TX, OK, AR, LA — major port and industrial markets</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Mountain West</h4>
+          <p>MT, ID, WY, CO, UT, NV, AZ, NM</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Pacific Northwest</h4>
+          <p>WA, OR — including major port freight lanes</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>West Coast</h4>
+          <p>CA — LA Basin, Bay Area, Central Valley, San Diego</p>
+        </div>
+        <div class="region-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Central Plains</h4>
+          <p>KS, NE, SD, ND — agricultural and industrial freight</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primary Lanes Table -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Primary Freight Corridors</h2>
+        <p>Our strongest lanes — established routes with consistent capacity, competitive pricing, and reliable transit times.</p>
+      </div>
+      <div style="overflow-x:auto; border-radius:var(--radius-lg); box-shadow:var(--shadow-md);">
+        <table class="lane-table">
+          <thead>
+            <tr>
+              <th>Origin Market</th>
+              <th>Destination Market</th>
+              <th>Primary Highway</th>
+              <th>Approx. Transit</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Los Angeles, CA</td>
+              <td>Chicago, IL</td>
+              <td>I-80 / I-40</td>
+              <td>2–3 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Chicago, IL</td>
+              <td>New York, NY</td>
+              <td>I-80 / I-90</td>
+              <td>1–2 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Dallas, TX</td>
+              <td>Atlanta, GA</td>
+              <td>I-20</td>
+              <td>1–2 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Los Angeles, CA</td>
+              <td>Houston, TX</td>
+              <td>I-10</td>
+              <td>2–3 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Atlanta, GA</td>
+              <td>New York, NY</td>
+              <td>I-85 / I-95</td>
+              <td>1–2 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Chicago, IL</td>
+              <td>Dallas, TX</td>
+              <td>I-55 / I-35</td>
+              <td>1–2 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Seattle, WA</td>
+              <td>Los Angeles, CA</td>
+              <td>I-5</td>
+              <td>1–2 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Miami, FL</td>
+              <td>Atlanta, GA</td>
+              <td>I-75 / I-95</td>
+              <td>1 Day</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Denver, CO</td>
+              <td>Kansas City, MO</td>
+              <td>I-70</td>
+              <td>1 Day</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+            <tr>
+              <td>Houston, TX</td>
+              <td>New York, NY</td>
+              <td>I-10 / I-95</td>
+              <td>2–3 Days</td>
+              <td><span class="lane-badge active">Active</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center; margin-top:16px; font-size:0.82rem; color:var(--text-light);">Transit times are estimates based on standard operating conditions. Expedited options available for all corridors.</p>
+    </div>
+  </section>
+
+  <!-- Flexibility -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="info-two-col">
+        <div class="info-panel">
+          <span class="divider"></span>
+          <h2>Flexible Logistics Coverage</h2>
+          <p>Beyond our core lane network, Great Town Freight provides flexible logistics coverage to meet evolving freight requirements. If your lanes are not listed, contact our dispatch team — we have the capacity and connections to move freight across virtually any domestic origin and destination pair.</p>
+          <p>We regularly work with shippers and brokers on lanes across all 48 states, including less-common markets, rural destinations, and specialized routing requirements.</p>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> Spot capacity available on lanes not listed above</li>
+            <li><i class="fas fa-check"></i> Team drivers for time-sensitive cross-country loads</li>
+            <li><i class="fas fa-check"></i> Drop-and-hook arrangements where available</li>
+            <li><i class="fas fa-check"></i> Flexible pickup and delivery windows to match your schedule</li>
+            <li><i class="fas fa-check"></i> Multi-stop and relay routing capabilities</li>
+            <li><i class="fas fa-check"></i> Consistent capacity relationships for recurring lanes</li>
+          </ul>
+          <div class="mt-24">
+            <a href="quote.html" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Request a Lane Quote</a>
+          </div>
+        </div>
+        <div class="info-graphic">
+          <div class="info-graphic-item"><i class="fas fa-map-location-dot"></i><div><strong>Contiguous 48 States</strong><span>Full nationwide domestic service coverage</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-route"></i><div><strong>Established Lane Network</strong><span>Proven routes with consistent capacity</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-bolt"></i><div><strong>Expedited Options</strong><span>Priority service for time-critical freight</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-handshake"></i><div><strong>Broker-Friendly Operations</strong><span>Quick load acceptance and carrier packet ready</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-phone"></i><div><strong>24/7 Dispatch Support</strong><span>Always available for coverage questions</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Need Coverage on Your Lane?</h2>
+      <p>Contact our dispatch team or request a quote — we provide capacity across the entire contiguous United States.</p>
+      <div class="cta-banner-btns">
+        <a href="quote.html" class="btn btn-navy btn-lg"><i class="fas fa-file-invoice"></i> Request Lane Quote</a>
+        <a href="contact.html" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> Talk to Dispatch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-name">Great Town <span>Freight</span></div>
+          <div class="footer-tagline">Freight Transportation &amp; Logistics</div>
+          <p class="footer-desc">Nationwide freight transportation across the contiguous 48 states. Fully insured, DOT compliant, and professionally operated.</p>
+          <div class="footer-trust-badges">
+            <span class="trust-badge"><i class="fas fa-certificate"></i> DOT Compliant</span>
+            <span class="trust-badge"><i class="fas fa-shield-halved"></i> Fully Insured</span>
+            <span class="trust-badge"><i class="fas fa-check-circle"></i> FMCSA Registered</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li><li><a href="coverage.html">Coverage Area</a></li>
+            <li><a href="safety.html">Safety &amp; Compliance</a></li><li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Full Truckload (FTL)</a></li><li><a href="services.html">Less Than Truckload</a></li>
+            <li><a href="services.html">Dedicated Freight</a></li><li><a href="services.html">Expedited Shipping</a></li>
+            <li><a href="services.html">Regional Transportation</a></li><li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+10000000000">(000) 000-0000</a><br><small>24/7 Dispatch</small></span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:dispatch@greattownfreight.com">dispatch@greattownfreight.com</a></span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Dispatch: 24/7 | Office: Mon–Fri 8AM–6PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Great Town Freight. All Rights Reserved. &mdash; Professional Freight Transportation &amp; Logistics</p>
+        <div class="footer-bottom-links"><a href="contact.html">Contact</a><a href="safety.html">Safety</a><a href="quote.html">Get Quote</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>function toggleMenu(){var m=document.getElementById('mobileMenu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+</body>
+</html>

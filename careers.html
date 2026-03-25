@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Drive with Great Town Freight — Professional trucking careers, owner operator opportunities, competitive pay, consistent freight, and professional dispatch support." />
+  <title>Careers | Great Town Freight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .position-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .position-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .position-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .position-card-top {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      padding: 28px 24px;
+    }
+    .position-card-top i { color: var(--gold); font-size: 1.8rem; margin-bottom: 10px; display: block; }
+    .position-card-top h3 { color: var(--white); margin: 0; font-size: 1.05rem; }
+    .position-card-top p  { color: rgba(255,255,255,0.6); font-size: 0.8rem; margin: 4px 0 0; }
+    .position-card-body { padding: 24px; }
+    .position-card-body ul { margin-bottom: 20px; }
+    .position-card-body ul li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .position-card-body ul li:last-child { border-bottom: none; }
+    .position-card-body ul li i { color: var(--gold); font-size: 0.75rem; flex-shrink: 0; }
+    @media (max-width: 768px) { .position-cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="alert-bar">
+    <p><i class="fas fa-truck"></i>&nbsp; Now Accepting Driver Applications &mdash; Owner Operators Welcome &nbsp;<a href="#apply">Apply Now &rsaquo;</a></p>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Great Town <span>Freight</span></span>
+          <span class="nav-logo-tag">Transportation &amp; Logistics</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li><li><a href="fleet.html">Fleet</a></li>
+          <li><a href="coverage.html">Coverage</a></li><li><a href="safety.html">Safety</a></li>
+          <li><a href="shippers.html">Shippers / Brokers</a></li><li><a href="careers.html" class="active">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li><li class="nav-cta"><a href="quote.html">Request Quote</a></li>
+        </ul>
+        <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="fleet.html">Fleet</a><a href="coverage.html">Coverage</a><a href="safety.html">Safety &amp; Compliance</a>
+      <a href="shippers.html">Shippers / Brokers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="quote.html" class="mobile-cta">Request Freight Quote</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span>/</span>
+          <span style="color:rgba(255,255,255,0.7);">Careers</span>
+        </div>
+        <h1>Drive With Great Town Freight</h1>
+        <p>Professional driving opportunities with competitive pay, consistent freight, and a dispatch team that treats drivers with the respect they deserve. Company drivers and owner operators welcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Drive With Us -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="careers-layout">
+        <div>
+          <span class="divider"></span>
+          <h2>Why Drivers Choose Great Town Freight</h2>
+          <p>We built our operations around the understanding that professional drivers are the backbone of this company. When our drivers succeed, our business succeeds. That philosophy drives every decision we make about pay, scheduling, routes, and support.</p>
+          <p>Whether you're a company driver looking for consistent lanes or an owner operator seeking a professional dispatch partner, Great Town Freight provides the load volume, communication, and operational support to build a sustainable, profitable driving career.</p>
+          <ul class="perks-list" style="margin-top:28px;">
+            <li>
+              <div class="perk-icon"><i class="fas fa-dollar-sign"></i></div>
+              <div class="perk-text">
+                <strong>Competitive Pay Rates</strong>
+                <span>Competitive per-mile rates for company drivers. Owner operators receive strong gross revenue on every load with transparent rate structures.</span>
+              </div>
+            </li>
+            <li>
+              <div class="perk-icon"><i class="fas fa-boxes-stacked"></i></div>
+              <div class="perk-text">
+                <strong>Consistent Freight Volume</strong>
+                <span>Established shipper and broker relationships provide steady load availability across our lane network — no sitting and waiting for freight.</span>
+              </div>
+            </li>
+            <li>
+              <div class="perk-icon"><i class="fas fa-headset"></i></div>
+              <div class="perk-text">
+                <strong>Professional Dispatch Support</strong>
+                <span>24/7 dispatch team that communicates clearly, handles issues proactively, and treats every driver as a valued professional — not a number.</span>
+              </div>
+            </li>
+            <li>
+              <div class="perk-icon"><i class="fas fa-route"></i></div>
+              <div class="perk-text">
+                <strong>Established Lane Network</strong>
+                <span>Preferred routes and recurring lanes mean predictable miles, familiar delivery points, and reduced deadhead on your runs.</span>
+              </div>
+            </li>
+            <li>
+              <div class="perk-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+              <div class="perk-text">
+                <strong>Prompt, Reliable Payments</strong>
+                <span>Company drivers paid on schedule. Owner operators: factoring arrangements available for fast pay on every load delivered.</span>
+              </div>
+            </li>
+            <li>
+              <div class="perk-icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="perk-text">
+                <strong>Safe, Compliant Operations</strong>
+                <span>We run legal, compliant operations — no pressure to violate HOS, skip inspections, or operate unsafe equipment. Ever.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Apply Form -->
+        <div id="apply">
+          <div class="form-wrap" style="max-width:none;">
+            <div class="form-title">
+              <span class="tag tag-gold" style="margin-bottom:12px; display:inline-block;">Now Hiring</span>
+              <h2>Apply Now</h2>
+              <p>Complete the form below and our team will contact you within one business day to discuss available opportunities.</p>
+            </div>
+            <form action="#" method="POST" onsubmit="return handleCareerSubmit(event)">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>First Name *</label>
+                  <input type="text" name="first_name" placeholder="First name" required />
+                </div>
+                <div class="form-group">
+                  <label>Last Name *</label>
+                  <input type="text" name="last_name" placeholder="Last name" required />
+                </div>
+                <div class="form-group">
+                  <label>Phone Number *</label>
+                  <input type="tel" name="phone" placeholder="(000) 000-0000" required />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" name="email" placeholder="your@email.com" />
+                </div>
+                <div class="form-group">
+                  <label>Position Type *</label>
+                  <select name="position_type" required>
+                    <option value="">Select position type</option>
+                    <option>Company Driver — OTR (Over the Road)</option>
+                    <option>Company Driver — Regional</option>
+                    <option>Company Driver — Local</option>
+                    <option>Owner Operator — OTR</option>
+                    <option>Owner Operator — Regional</option>
+                    <option>Lease Purchase Driver</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>CDL Class *</label>
+                  <select name="cdl_class" required>
+                    <option value="">Select CDL class</option>
+                    <option>Class A CDL</option>
+                    <option>Class B CDL</option>
+                    <option>No CDL — Seeking Training Info</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Years of Experience *</label>
+                  <select name="experience" required>
+                    <option value="">Select experience level</option>
+                    <option>Less than 1 year</option>
+                    <option>1–2 years</option>
+                    <option>3–5 years</option>
+                    <option>6–10 years</option>
+                    <option>10+ years</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Equipment Experience</label>
+                  <select name="equipment">
+                    <option value="">Select primary equipment</option>
+                    <option>Dry Van</option>
+                    <option>Flatbed</option>
+                    <option>Reefer / Refrigerated</option>
+                    <option>Box Truck</option>
+                    <option>Multiple Equipment Types</option>
+                  </select>
+                </div>
+                <div class="form-group span-2">
+                  <label>Current Location / Home Base</label>
+                  <input type="text" name="location" placeholder="City, State" />
+                </div>
+                <div class="form-group span-2">
+                  <label>Tell Us About Yourself</label>
+                  <textarea name="message" placeholder="Describe your driving experience, preferred lanes, any endorsements, and what you're looking for in a carrier..."></textarea>
+                </div>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> Submit Application</button>
+              </div>
+              <p class="form-note"><i class="fas fa-lock"></i> Your information is private and will only be used to contact you about employment opportunities.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Positions -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Open Positions</h2>
+        <p>We are currently accepting applications for the following driver positions. Owner operators and qualified company drivers encouraged to apply.</p>
+      </div>
+      <div class="position-cards">
+        <div class="position-card">
+          <div class="position-card-top">
+            <i class="fas fa-truck"></i>
+            <h3>OTR Company Driver</h3>
+            <p>Over-the-road — Nationwide</p>
+          </div>
+          <div class="position-card-body">
+            <ul>
+              <li><i class="fas fa-check"></i> Class A CDL required</li>
+              <li><i class="fas fa-check"></i> Minimum 1 year OTR experience</li>
+              <li><i class="fas fa-check"></i> Clean MVR and background</li>
+              <li><i class="fas fa-check"></i> DOT medical certificate current</li>
+              <li><i class="fas fa-check"></i> Pass pre-employment drug screen</li>
+            </ul>
+            <a href="#apply" class="btn btn-navy" style="width:100%; justify-content:center;"><i class="fas fa-file-alt"></i> Apply Now</a>
+          </div>
+        </div>
+        <div class="position-card">
+          <div class="position-card-top">
+            <i class="fas fa-id-card"></i>
+            <h3>Owner Operator</h3>
+            <p>OTR &amp; Regional — All Lanes</p>
+          </div>
+          <div class="position-card-body">
+            <ul>
+              <li><i class="fas fa-check"></i> Own or lease your own tractor</li>
+              <li><i class="fas fa-check"></i> Active Class A CDL</li>
+              <li><i class="fas fa-check"></i> Bobtail &amp; occupational insurance</li>
+              <li><i class="fas fa-check"></i> Clean safety record required</li>
+              <li><i class="fas fa-check"></i> ELD device or will lease one</li>
+            </ul>
+            <a href="#apply" class="btn btn-navy" style="width:100%; justify-content:center;"><i class="fas fa-file-alt"></i> Apply Now</a>
+          </div>
+        </div>
+        <div class="position-card">
+          <div class="position-card-top">
+            <i class="fas fa-map-location-dot"></i>
+            <h3>Regional Driver</h3>
+            <p>Regional Lanes — Home More Often</p>
+          </div>
+          <div class="position-card-body">
+            <ul>
+              <li><i class="fas fa-check"></i> Class A CDL required</li>
+              <li><i class="fas fa-check"></i> Regional routes — home weekly+</li>
+              <li><i class="fas fa-check"></i> Dry van and flatbed available</li>
+              <li><i class="fas fa-check"></i> Consistent scheduled lanes</li>
+              <li><i class="fas fa-check"></i> Pass pre-employment requirements</li>
+            </ul>
+            <a href="#apply" class="btn btn-navy" style="width:100%; justify-content:center;"><i class="fas fa-file-alt"></i> Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requirements -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Driver Requirements</h2>
+        <p>We maintain professional standards for all drivers to ensure safe operations, regulatory compliance, and a quality experience for our clients and partners.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:900px; margin:0 auto;">
+        <div>
+          <h3 style="margin-bottom:20px; color:var(--navy);">Minimum Requirements</h3>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> Valid Class A Commercial Driver's License (CDL)</li>
+            <li><i class="fas fa-check"></i> Current DOT Medical Examiner's Certificate</li>
+            <li><i class="fas fa-check"></i> Clean Motor Vehicle Record (MVR)</li>
+            <li><i class="fas fa-check"></i> No DUI/DWI convictions in the past 10 years</li>
+            <li><i class="fas fa-check"></i> Pass pre-employment drug and alcohol screen</li>
+            <li><i class="fas fa-check"></i> Minimum 1 year verifiable CDL driving experience</li>
+            <li><i class="fas fa-check"></i> No serious traffic violations within past 3 years</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom:20px; color:var(--navy);">Owner Operator Requirements</h3>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> All company driver requirements above</li>
+            <li><i class="fas fa-check"></i> Own or leased tractor in good mechanical condition</li>
+            <li><i class="fas fa-check"></i> Active bobtail and occupational accident insurance</li>
+            <li><i class="fas fa-check"></i> ELD-equipped (or lease through us)</li>
+            <li><i class="fas fa-check"></i> IFTA registration current</li>
+            <li><i class="fas fa-check"></i> DOT operating authority or willing to lease-on</li>
+            <li><i class="fas fa-check"></i> Professional, customer-service oriented demeanor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Drive With Great Town Freight?</h2>
+      <p>Submit your application today and our team will be in touch within one business day to discuss opportunities that fit your experience and goals.</p>
+      <div class="cta-banner-btns">
+        <a href="#apply" class="btn btn-navy btn-lg"><i class="fas fa-file-alt"></i> Submit Application</a>
+        <a href="contact.html" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> Call Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-name">Great Town <span>Freight</span></div>
+          <div class="footer-tagline">Freight Transportation &amp; Logistics</div>
+          <p class="footer-desc">Professional trucking careers for company drivers and owner operators. Competitive pay, consistent freight, and professional dispatch support.</p>
+          <div class="footer-trust-badges">
+            <span class="trust-badge"><i class="fas fa-certificate"></i> DOT Compliant</span>
+            <span class="trust-badge"><i class="fas fa-shield-halved"></i> Fully Insured</span>
+            <span class="trust-badge"><i class="fas fa-headset"></i> 24/7 Dispatch</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li><li><a href="coverage.html">Coverage Area</a></li>
+            <li><a href="safety.html">Safety &amp; Compliance</a></li><li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Full Truckload (FTL)</a></li><li><a href="services.html">Less Than Truckload</a></li>
+            <li><a href="services.html">Dedicated Freight</a></li><li><a href="services.html">Expedited Shipping</a></li>
+            <li><a href="services.html">Regional Transportation</a></li><li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+10000000000">(000) 000-0000</a><br><small>24/7 Dispatch</small></span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:dispatch@greattownfreight.com">dispatch@greattownfreight.com</a></span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Dispatch: 24/7 | Office: Mon–Fri 8AM–6PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Great Town Freight. All Rights Reserved. &mdash; Professional Freight Transportation &amp; Logistics</p>
+        <div class="footer-bottom-links"><a href="contact.html">Contact</a><a href="safety.html">Safety</a><a href="quote.html">Get Quote</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu(){var m=document.getElementById('mobileMenu');m.style.display=m.style.display==='flex'?'none':'flex';}
+    function handleCareerSubmit(e){
+      e.preventDefault();
+      var btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Application Submitted!';
+      btn.style.background = '#16a34a';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>

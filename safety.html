@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Great Town Freight Safety & Compliance — DOT compliant operations, FMCSA registered, fully insured carrier, ELD equipped fleet, professional driver standards. Funding and lender ready." />
+  <title>Safety &amp; Compliance | Great Town Freight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .compliance-highlight {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: var(--radius-lg);
+      padding: 52px 48px;
+      border-left: 6px solid var(--gold);
+    }
+    .compliance-highlight h2 { color: var(--white); margin-bottom: 14px; }
+    .compliance-highlight p  { color: rgba(255,255,255,0.72); font-size:1.05rem; }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .cert-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .cert-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .cert-card i { font-size: 2.2rem; color: var(--navy); margin-bottom: 16px; display: block; }
+    .cert-card h4 { margin-bottom: 8px; font-size: 1rem; }
+    .cert-card p  { font-size: 0.84rem; color: var(--text-light); margin: 0; }
+    .insurance-table { width: 100%; border-collapse: collapse; }
+    .insurance-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .insurance-table td {
+      padding: 14px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-mid);
+    }
+    .insurance-table tr:nth-child(even) td { background: var(--off-white); }
+    .insurance-table td:first-child { font-weight: 600; color: var(--text-dark); }
+    .insurance-table td:last-child { color: var(--blue); font-weight: 600; }
+    .safety-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .safety-stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .safety-stat-card .num {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .safety-stat-card .num span { color: var(--gold); }
+    .safety-stat-card label { font-size: 0.78rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.07em; }
+    @media (max-width: 768px) {
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .safety-stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      .safety-stat-grid { grid-template-columns: 1fr; }
+      .compliance-highlight { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="alert-bar">
+    <p><i class="fas fa-phone"></i>&nbsp; 24/7 Dispatch Available &mdash; Call or Request a Quote Online &nbsp;<a href="quote.html">Get Started &rsaquo;</a></p>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Great Town <span>Freight</span></span>
+          <span class="nav-logo-tag">Transportation &amp; Logistics</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li><li><a href="fleet.html">Fleet</a></li>
+          <li><a href="coverage.html">Coverage</a></li><li><a href="safety.html" class="active">Safety</a></li>
+          <li><a href="shippers.html">Shippers / Brokers</a></li><li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li><li class="nav-cta"><a href="quote.html">Request Quote</a></li>
+        </ul>
+        <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+      <a href="fleet.html">Fleet</a><a href="coverage.html">Coverage</a><a href="safety.html">Safety &amp; Compliance</a>
+      <a href="shippers.html">Shippers / Brokers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="quote.html" class="mobile-cta">Request Freight Quote</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a><span>/</span>
+          <span style="color:rgba(255,255,255,0.7);">Safety &amp; Compliance</span>
+        </div>
+        <h1>Safety &amp; Compliance</h1>
+        <p>Great Town Freight operates with full DOT and FMCSA compliance. Our safety program, insurance coverage, and operational standards reflect a carrier built to meet the highest requirements in the industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Statement -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="compliance-highlight">
+        <div style="display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap;">
+          <i class="fas fa-shield-halved" style="font-size:3rem; color:var(--gold); flex-shrink:0; margin-top:4px;"></i>
+          <div>
+            <h2>Our Commitment to Safety &amp; Regulatory Compliance</h2>
+            <p>Great Town Freight operates as a fully compliant carrier under all applicable federal and state transportation regulations. We maintain active DOT registration and FMCSA operating authority, carry comprehensive cargo and liability insurance, operate an ELD-equipped fleet, and enforce strict driver qualification standards across all operations.</p>
+            <p style="margin-top:12px;">Our compliance infrastructure is built not just to satisfy regulatory minimums — but to demonstrate the operational integrity expected by shippers, brokers, lenders, and government contracting agencies who choose to work with our company.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Stats -->
+  <section class="section-pad-sm bg-light">
+    <div class="container">
+      <div class="safety-stat-grid">
+        <div class="safety-stat-card">
+          <div class="num"><span>100</span>%</div>
+          <label>DOT Compliance Rate</label>
+        </div>
+        <div class="safety-stat-card">
+          <div class="num">$<span>1M</span>+</div>
+          <label>Cargo Insurance Coverage</label>
+        </div>
+        <div class="safety-stat-card">
+          <div class="num"><span>100</span>%</div>
+          <label>ELD-Equipped Fleet</label>
+        </div>
+        <div class="safety-stat-card">
+          <div class="num"><span>0</span></div>
+          <label>Tolerance for Violations</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance Certifications -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Regulatory Compliance &amp; Certifications</h2>
+        <p>Great Town Freight maintains all required federal and state registrations, authorities, and compliance certifications necessary to operate as a professional interstate carrier.</p>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <i class="fas fa-id-badge"></i>
+          <h4>USDOT Number</h4>
+          <p>Active USDOT registration maintained with the Federal Motor Carrier Safety Administration. DOT number available upon request for broker and shipper qualification.</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-file-contract"></i>
+          <h4>FMCSA Operating Authority</h4>
+          <p>Active MC (Motor Carrier) authority issued by FMCSA. Authority maintained in good standing with no revocations, suspensions, or compliance orders.</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-shield-halved"></i>
+          <h4>Insurance Filings</h4>
+          <p>All required insurance filings submitted and active with FMCSA — cargo, auto liability, and general liability coverage at or above federal minimums.</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-tablet-screen-button"></i>
+          <h4>ELD Mandate Compliance</h4>
+          <p>Full compliance with the FMCSA Electronic Logging Device mandate. All commercial vehicles equipped with certified, FMCSA-registered ELD devices.</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-vial"></i>
+          <h4>Drug &amp; Alcohol Program</h4>
+          <p>DOT-compliant drug and alcohol testing program administered through a certified Third-Party Administrator (TPA). Consortium enrollment maintained.</p>
+        </div>
+        <div class="cert-card">
+          <i class="fas fa-wrench"></i>
+          <h4>Vehicle Maintenance Program</h4>
+          <p>Systematic preventive maintenance program in compliance with FMCSA 49 CFR Part 396. All inspection and maintenance records retained per federal requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance Coverage -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Insurance Coverage</h2>
+        <p>Comprehensive insurance protection covering every operational risk. Certificates of insurance available immediately for any shipper, broker, or lender requiring verification.</p>
+      </div>
+      <div style="overflow-x:auto; border-radius:var(--radius-lg); box-shadow:var(--shadow-md); margin-bottom:32px;">
+        <table class="insurance-table">
+          <thead>
+            <tr>
+              <th>Coverage Type</th>
+              <th>Description</th>
+              <th>Coverage Level</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Auto Liability</td>
+              <td>Commercial motor vehicle liability — bodily injury and property damage</td>
+              <td>$1,000,000 per occurrence</td>
+              <td style="color:#16a34a; font-weight:700;">&#10003; Active</td>
+            </tr>
+            <tr>
+              <td>Cargo Insurance</td>
+              <td>All-risk motor truck cargo coverage for shipper's goods in transit</td>
+              <td>Up to $100,000 per load</td>
+              <td style="color:#16a34a; font-weight:700;">&#10003; Active</td>
+            </tr>
+            <tr>
+              <td>General Liability</td>
+              <td>Commercial general liability for business operations and premises</td>
+              <td>$1,000,000 per occurrence</td>
+              <td style="color:#16a34a; font-weight:700;">&#10003; Active</td>
+            </tr>
+            <tr>
+              <td>Workers' Compensation</td>
+              <td>Statutory workers' compensation coverage for all employees</td>
+              <td>Statutory limits — state requirements</td>
+              <td style="color:#16a34a; font-weight:700;">&#10003; Active</td>
+            </tr>
+            <tr>
+              <td>Physical Damage</td>
+              <td>Comprehensive and collision coverage on owned tractors and trailers</td>
+              <td>Actual cash value of equipment</td>
+              <td style="color:#16a34a; font-weight:700;">&#10003; Active</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight-box">
+        <h3><i class="fas fa-file-pdf" style="color:var(--gold); margin-right:10px;"></i> Certificates of Insurance Available on Request</h3>
+        <p>Shippers, brokers, and lenders may request certificates of insurance at any time. COIs are provided promptly and name additional insureds as required. Contact our office to request documentation.</p>
+        <div style="margin-top:20px;">
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Request Insurance Documentation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Standards Grid -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header center">
+        <span class="divider"></span>
+        <h2>Operational Safety Standards</h2>
+        <p>Our safety program goes beyond regulatory compliance — it reflects a culture of responsibility built into every aspect of Great Town Freight's operations.</p>
+      </div>
+      <div class="safety-grid">
+        <div class="safety-card">
+          <div class="safety-icon"><i class="fas fa-user-shield"></i></div>
+          <h3>Driver Qualification</h3>
+          <p>All drivers undergo full FMCSA 49 CFR Part 391 qualification — including background checks, MVR review, road testing, employment verification, and medical certification.</p>
+        </div>
+        <div class="safety-card">
+          <div class="safety-icon"><i class="fas fa-tablet-screen-button"></i></div>
+          <h3>Electronic Logging Devices</h3>
+          <p>ELD devices installed on all commercial vehicles provide real-time Hours of Service (HOS) tracking, eliminating manual log violations and ensuring complete HOS compliance.</p>
+        </div>
+        <div class="safety-card">
+          <div class="safety-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Pre-Trip Inspections</h3>
+          <p>Mandatory driver vehicle inspection reports (DVIRs) required before every dispatch. All identified defects documented and repaired before the vehicle returns to service.</p>
+        </div>
+        <div class="safety-card">
+          <div class="safety-icon"><i class="fas fa-vial"></i></div>
+          <h3>Drug &amp; Alcohol Testing</h3>
+          <p>Comprehensive DOT drug and alcohol testing program — pre-employment, random, post-accident, return-to-duty, and reasonable suspicion. Zero tolerance policy strictly enforced.</p>
+        </div>
+        <div class="safety-card">
+          <div class="safety-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Ongoing Safety Training</h3>
+          <p>Regular safety meetings, defensive driving programs, regulatory update training, and performance reviews keep our drivers informed and operating at peak safety standards.</p>
+        </div>
+        <div class="safety-card">
+          <div class="safety-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>CSA Score Monitoring</h3>
+          <p>We actively monitor our FMCSA Compliance, Safety, Accountability (CSA) BASIC scores and take immediate corrective action to address any areas of concern or improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FMCSA Compliance Section -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="info-two-col">
+        <div class="info-panel">
+          <span class="divider"></span>
+          <h2>FMCSA Compliance Program</h2>
+          <p>Great Town Freight's operations are structured for full compliance with all Federal Motor Carrier Safety Administration regulations. Our compliance program covers every aspect of our operation — from driver qualification and vehicle maintenance to hours of service and controlled substances testing.</p>
+          <p>We maintain complete, audit-ready records for all compliance categories and conduct internal reviews to ensure ongoing adherence to all applicable federal regulations.</p>
+          <ul class="check-list">
+            <li><i class="fas fa-check"></i> 49 CFR Part 382 — Controlled Substances &amp; Alcohol</li>
+            <li><i class="fas fa-check"></i> 49 CFR Part 383 — Commercial Driver's License Standards</li>
+            <li><i class="fas fa-check"></i> 49 CFR Part 390 — Federal Motor Carrier Safety Regulations General</li>
+            <li><i class="fas fa-check"></i> 49 CFR Part 391 — Qualifications of Drivers</li>
+            <li><i class="fas fa-check"></i> 49 CFR Part 392 — Driving of Commercial Motor Vehicles</li>
+            <li><i class="fas fa-check"></i> 49 CFR Part 395 — Hours of Service of Drivers</li>
+            <li><i class="fas fa-check"></i> 49 CFR Part 396 — Inspection, Repair, and Maintenance</li>
+          </ul>
+        </div>
+        <div class="info-graphic">
+          <div class="info-graphic-item"><i class="fas fa-building-columns"></i><div><strong>FMCSA Registered Carrier</strong><span>Active authority — no revocations or suspensions</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-file-lines"></i><div><strong>Audit-Ready Documentation</strong><span>All records maintained per retention requirements</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-magnifying-glass-chart"></i><div><strong>CSA Score Management</strong><span>Active monitoring and improvement programs</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-user-check"></i><div><strong>DQ File Compliance</strong><span>Complete driver qualification files — 49 CFR 391</span></div></div>
+          <div class="info-graphic-item"><i class="fas fa-clock-rotate-left"></i><div><strong>HOS Compliance</strong><span>ELD-enforced Hours of Service — zero manual logs</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Bottom CTA -->
+  <section class="compliance-banner">
+    <div class="container">
+      <div class="section-header center" style="margin-bottom:40px;">
+        <span class="divider" style="margin:0 auto 16px;"></span>
+        <h2 class="text-white">Safety Documentation Available</h2>
+        <p class="text-white" style="opacity:0.7; max-width:580px; margin:0 auto;">Shippers, brokers, lenders, and government contracting agencies may request our full compliance documentation at any time. We maintain transparency across all compliance areas.</p>
+      </div>
+      <div class="compliance-items">
+        <div class="compliance-item">
+          <i class="fas fa-file-shield"></i>
+          <strong>Carrier Packet</strong>
+          <span>Available on request — complete broker setup</span>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-file-invoice"></i>
+          <strong>Certificate of Insurance</strong>
+          <span>Issued promptly to any qualified party</span>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-id-card"></i>
+          <strong>DOT / MC Numbers</strong>
+          <span>Available for immediate verification</span>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-wrench"></i>
+          <strong>Maintenance Records</strong>
+          <span>Complete PM and inspection documentation</span>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-phone"></i>
+          <strong>Safety Contact</strong>
+          <span>Direct line to compliance department</span>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:40px;">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Request Compliance Documentation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Work With a Carrier That Takes Compliance Seriously</h2>
+      <p>Great Town Freight's safety and compliance program gives shippers, brokers, and lenders the confidence to build lasting business relationships with us.</p>
+      <div class="cta-banner-btns">
+        <a href="quote.html" class="btn btn-navy btn-lg"><i class="fas fa-file-invoice"></i> Request Freight Quote</a>
+        <a href="shippers.html" class="btn btn-outline btn-lg"><i class="fas fa-handshake"></i> Broker Partnership</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand-name">Great Town <span>Freight</span></div>
+          <div class="footer-tagline">Freight Transportation &amp; Logistics</div>
+          <p class="footer-desc">DOT compliant, FMCSA registered, fully insured freight carrier operating professionally across the contiguous United States.</p>
+          <div class="footer-trust-badges">
+            <span class="trust-badge"><i class="fas fa-certificate"></i> DOT Compliant</span>
+            <span class="trust-badge"><i class="fas fa-shield-halved"></i> Fully Insured</span>
+            <span class="trust-badge"><i class="fas fa-check-circle"></i> FMCSA Registered</span>
+            <span class="trust-badge"><i class="fas fa-headset"></i> 24/7 Dispatch</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li><li><a href="coverage.html">Coverage Area</a></li>
+            <li><a href="safety.html">Safety &amp; Compliance</a></li><li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">Full Truckload (FTL)</a></li><li><a href="services.html">Less Than Truckload</a></li>
+            <li><a href="services.html">Dedicated Freight</a></li><li><a href="services.html">Expedited Shipping</a></li>
+            <li><a href="services.html">Regional Transportation</a></li><li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+10000000000">(000) 000-0000</a><br><small>24/7 Dispatch</small></span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:dispatch@greattownfreight.com">dispatch@greattownfreight.com</a></span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Dispatch: 24/7 | Office: Mon–Fri 8AM–6PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Great Town Freight. All Rights Reserved. &mdash; DOT Compliant &mdash; Fully Insured Carrier &mdash; FMCSA Registered</p>
+        <div class="footer-bottom-links"><a href="contact.html">Contact</a><a href="safety.html">Safety</a><a href="quote.html">Get Quote</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>function toggleMenu(){var m=document.getElementById('mobileMenu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+</body>
+</html>
